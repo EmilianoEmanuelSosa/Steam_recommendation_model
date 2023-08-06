@@ -4,6 +4,18 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+df_genero=pd.read_csv('Datasets/Data_Processed/def_genero.csv')
+df_genero=pd.read_csv('Datasets/Data_Processed/def_juegos.csv')
+df_genero=pd.read_csv('Datasets/Data_Processed/def_specs.csv')
+df_genero=pd.read_csv('Datasets/Data_Processed/def_eatlyacces.csv')
+df_genero=pd.read_csv('Datasets/Data_Processed/def_sentiment.csv')
+df_genero=pd.read_csv('Datasets/Data_Processed/def_metascore.csv')
+
+
+
+
+#Endpoints of API
+
 @app.get('/genre_most_year/{idioma}')
 def genero( Ano: str ):
     return 'ok'
