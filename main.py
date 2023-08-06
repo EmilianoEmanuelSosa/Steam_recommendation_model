@@ -164,7 +164,7 @@ def earlyacces(Ano: str):
 
 
 
-@app.get('/sentiment_year/{Ano}')
+@app.get('/sentiment/{Ano}')
 def sentiment(Ano: str):
     """
     Returns a dictionary with the count of sentiment categories for a specific year.
@@ -205,7 +205,7 @@ def sentiment(Ano: str):
 
 
 
-@app.get('/game_meta_score/{Ano}')
+@app.get('/metascore/{Ano}')
 def metascore(Año: str):
     """
     Returns a dictionary with the top 5 games for a specific year with the highest metascore.
