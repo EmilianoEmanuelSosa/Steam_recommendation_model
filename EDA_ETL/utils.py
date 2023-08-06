@@ -6,3 +6,6 @@ def get_mode_list(lst):
     # Find the most common list (the mode) and return it
     mode_list = counter.most_common(1)[0][0]
     return mode_list
+
+def join_genres(genre_list):
+    return " ".join(genre_list).replace("[", "").replace("]", "").replace("'", "")
