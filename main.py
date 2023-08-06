@@ -128,10 +128,6 @@ def specs(Ano: str):
 
 
 
-
-
-
-
 @app.get('/earlyacces/{Ano}')
 def earlyacces(Ano: str):
     """
