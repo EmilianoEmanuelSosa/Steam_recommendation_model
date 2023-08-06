@@ -3,5 +3,3 @@ numpy
 pandas
 iso639
 uvicorn
-collections
-re
