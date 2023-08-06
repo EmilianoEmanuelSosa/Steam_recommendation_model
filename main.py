@@ -83,11 +83,6 @@ def juegos(year: str):
     return game_names
 
 
-
-
-from collections import Counter
-import ast
-
 @app.get('/Specs/{Ano}')
 def specs(Ano: str):
     """
