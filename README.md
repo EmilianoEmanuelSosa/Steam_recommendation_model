@@ -21,7 +21,7 @@ The objective of this project is to generate an API, where the Steam dataset can
 
 <br></br>
 
-![Alt text](https://raw.githubusercontent.com/Rickhersd/Steam_games_API_services/main/imgs/ProcessFlowConceptualDiagram.png)
+![Alt text](src/DiagramaConceptualDelFlujoDeProcesos.png)
 
 ---
 
