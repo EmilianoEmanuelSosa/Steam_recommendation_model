@@ -3,3 +3,5 @@ numpy
 pandas
 iso639
 uvicorn
+flask
+pickle

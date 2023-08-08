@@ -3,6 +3,8 @@ import numpy as np
 from fastapi import FastAPI
 import re
 from collections import Counter
+from flask import Flask, jsonify, request
+from EDA_ETL import utils as ctrl
 
 app = FastAPI()
 
@@ -241,3 +243,58 @@ def metascore(Año: str):
     top_5_dict = {row['app_name']: row['metascore'] for _, row in top_5_games.iterrows()}
 
     return top_5_dict
+
+
+
+@app.post("/prediccion")
+def prediccion(
+    release_date: int = 2010,
+    Number_of_tags: int = 0,
+    Number_of_specs: int = 0,
+    metascore: int = 80,
+    sentiment: int = 5,
+    Indie: int = 0,
+    Casual: int = 0,
+    Action: int = 0,
+    Sports: int = 0,
+    Racing: int = 0,
+    Strategy: int = 0,
+    RPG: int = 0,
+    Simulation: int = 0
+):
+    default_params = {
+        'release_date': 2010,
+        'Number_of_tags': 0,
+        'Number_of_specs': 0,
+        'metascore': 80,
+        'sentiment': 5,
+        'Indie': 0,
+        'Casual': 0,
+        'Action': 0,
+        'Sports': 0,
+        'Racing': 0,
+        'Strategy': 0,
+        'RPG': 0,
+        'Simulation': 0
+    }
+
+    data_predict = [
+        release_date,
+        Number_of_tags,
+        Number_of_specs,
+        metascore,
+        sentiment,
+        Indie,
+        Casual,
+        Action,
+        Sports,
+        Racing,
+        Strategy,
+        RPG,
+        Simulation
+    ]
+
+    model = ctrl.load_model()  # Asegúrate de que ctrl.load_model() esté definido en tu código
+    result = model.predict([data_predict])
+
+    return {"response": result[0],"rsme": 12}
