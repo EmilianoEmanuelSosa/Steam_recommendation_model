@@ -171,7 +171,7 @@ def load_model():
   """
   Abre el arcrvivo con
   """  
-  modelfile = open('/home/mkm/programin/Steam_recommendation_model/Datasets/Data_Processed/fitted_model.pkl', 'rb')
+  modelfile = open('Datasets/Data_Processed/fitted_model.pkl', 'rb')
   model = pickle.load(modelfile)
   modelfile.close()
   return model
@@ -291,3 +291,4 @@ def get_metascore(year: int, limit=10000, ) -> list:
   top_games = df.head(limit)
   top_games_dict = top_games.to_dict(orient='records')
   return top_games_dict
+

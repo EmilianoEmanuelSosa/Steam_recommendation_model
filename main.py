@@ -293,6 +293,16 @@ def prediccion(
         RPG,
         Simulation
     ]
+    import os
+    print("Directorio actual:", os.getcwd())
+    print('AMO')
+    print('AMO')
+    print('AMO')
+    print('AMO')
+    print('AMO')
+    print('AMO')
+    print('AMO')
+    print('AMO')
 
     model = ctrl.load_model()  # Asegúrate de que ctrl.load_model() esté definido en tu código
     result = model.predict([data_predict])
