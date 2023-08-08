@@ -161,7 +161,7 @@ def load_data():
   """
   Abre un archivo serializado y retorna el objeto cargado
   """
-  dbfile = open('../Datasets/Data_Processed/steam_games.pkl', 'rb')
+  dbfile = open('Datasets/Data_Processed/steam_games.pkl', 'rb')
   df = pd.read_pickle(dbfile)
   dbfile.close()
   return df
