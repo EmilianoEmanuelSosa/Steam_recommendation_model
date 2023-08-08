@@ -3,5 +3,8 @@ numpy
 pandas
 iso639
 uvicorn
-flask
-pickle
+Flask
+Flask-Cors
+scikit-learn
+python-dotenv
+gunicorn
