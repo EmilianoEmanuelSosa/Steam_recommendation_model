@@ -1,6 +1,6 @@
 <br></br>
 
-# steam_recommendation_model
+# Steam_recommendation_model
 
 <br></br>
 
